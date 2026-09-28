@@ -180,12 +180,12 @@ Unity Crew
 
 ## 4. Git Contribution Summary
 
-    19  Aeint Kyi Pyar Soe
+    17  Aeint Kyi Pyar Soe
      5  Kaung Khant Htoo
      5  Tyzon
      4  Khun Maung Aye
      2  karayuuco (before naming configuration of Aeint Kyi Pyar Soe)
-     1  ChannMyaeAung
+     3  ChannMyaeAung
 
 ---
 
