@@ -25,7 +25,7 @@ Throughout the collaborative workflow in `lab04-UnityCrew`, the team encountered
 |---|---|---|---|
 | **Conflict 1 (Lab Core Exercise)** | `e6054b4`, `637c74e` | `README.md` | Concurrent edits to the placeholder line `Creating Conflict` vs. new member table row. |
 | **Conflict 2 (Formatting & Run Instructions)** | `57844b5` | `README.md` | Group header formatting updates colliding with the addition of pytest execution instructions. |
-| **Conflict 3 (4th Member & Withdraw Tests)** | `c113fc8`, `b981ab1` | `README.md` | Documentation extraction into `conflict_resolution.md` colliding with 4th member's row and `test_withdraw.py`. |
+| **Conflict 3 (4th Member & Withdraw Tests)** | `c113fc8`, `b981ab1` | `README.md` | Documentation lines colliding with 4th member's row. |
 | **Conflict 4 (5th Member & Shared Fixture Tests)** | `fb62bba` | `README.md` | Local conflict explanations colliding with 5th member's row, `test_shared.py`, and `.gitignore`. |
 
 ---
@@ -92,8 +92,8 @@ In merge commits `c113fc8` and `b981ab1`, two branches diverged:
 - Concurrently, Kaung Khant Htoo pushed commits (`cacf817`, `845ad68`, `66148bf`) adding [test_withdraw.py] and appending `| Kaung Khant Htoo (6705140027) | kxkhantx | test_withdraw.py |` to [README.md].
 
 ### Final Decision Made by the Team
-1. **Incorporate New Member:** Retain Kaung Khant Htoo's member row in the `Who Did What` table and integrate [test_withdraw.py] into the automated test suite.
-2. **Modularize Lab Deliverables:** Keep [README.md] concise as a project overview, while maintaining `conflict_resolution.md` as the centralized lab report.
+1. **Incorporate New Member:** Retain Kaung Khant Htoo's member row in the `Who Did What` table.
+2. **Modularize Lab Deliverables:** Keep [README.md] concise as a project overview.
 3. **Harmonize Test Suite:** Ensure all tests from `test_deposit.py`, `test_teardown.py`, and `test_withdraw.py` run and pass synchronously.
 
 ### Why Git Could Not Automatically Resolve It
