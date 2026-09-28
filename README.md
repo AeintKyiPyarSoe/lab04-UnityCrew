@@ -147,7 +147,7 @@ Unity Crew
 
 ---
 ## 4. Git Contribution Summary
-    17  Aeint Kyi Pyar Soe
+    19  Aeint Kyi Pyar Soe
      5  Kaung Khant Htoo
      5  Tyzon
      4  Khun Maung Aye
