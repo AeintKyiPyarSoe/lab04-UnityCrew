@@ -2,7 +2,7 @@
 Group Assignment Submission by Unity Crew
 
 ## Group Name
-** Unity Crew **
+Unity Crew
 
 ## Who Did What
 | Member | GitHub Username | File |
