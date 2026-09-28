@@ -2,11 +2,11 @@
 
 Group Assignment Submission by Unity Crew
 
-## Group Name
+## 1. Group Name
 
 Unity Crew
 
-## Who Did What
+## 2. Who Did What
 
 | Member                          | GitHub Username | File                                 |
 | ------------------------------- | --------------- | ------------------------------------ |
@@ -16,11 +16,24 @@ Unity Crew
 | Chan Myae Aung (6705140010)     | ChanMyaeAung    | test_shared.py                       |
 | Kaung Khant Htoo (6705140027)   | kxkhantx        | test_withdraw.py                     |
 
+## 3. Our Merge Conflict
+## Overview of Conflicts Solved
 
-## 3. Conflict 1: The README Table & Marker Conflict (Lab Core Exercise)
+Throughout the collaborative workflow in `lab04-UnityCrew`, the team encountered and resolved four distinct merge conflicts:
+
+| Conflict | Commits Involved | Target File | Nature of Collision |
+|---|---|---|---|
+| **Conflict 1 (Lab Core Exercise)** | `e6054b4`, `637c74e` | `README.md` | Concurrent edits to the placeholder line `Creating Conflict` vs. new member table row. |
+| **Conflict 2 (Formatting & Run Instructions)** | `57844b5` | `README.md` | Group header formatting updates colliding with the addition of pytest execution instructions. |
+| **Conflict 3 (4th Member & Withdraw Tests)** | `c113fc8`, `b981ab1` | `README.md` | Documentation extraction into `conflict_resolution.md` colliding with 4th member's row and `test_withdraw.py`. |
+| **Conflict 4 (5th Member & Shared Fixture Tests)** | `fb62bba` | `README.md` | Local conflict explanations colliding with 5th member's row, `test_shared.py`, and `.gitignore`. |
+
+---
+
+## Conflict 1: The README Table & Marker Conflict (Lab Core Exercise)
 
 ### Conflict Markers Encountered
-During the merge of concurrent changes into [README.md] (commit `e6054b4`), Git halted automatic merging and inserted standard conflict markers:
+During the merge of concurrent changes into [README.md], Git halted automatic merging and inserted standard conflict markers:
 
 ```markdown
 <<<<<<< HEAD
@@ -53,7 +66,7 @@ Because both branches altered the identical file region in conflicting ways, Git
 
 ---
 
-## 4. Conflict 2: Group Header Formatting vs. Run Instructions
+## Conflict 2: Group Header Formatting vs. Run Instructions
 
 ### Conflicting Changes Encountered
 In merge commit `57844b5`, two parallel developments collided on [README.md]:
@@ -71,7 +84,7 @@ Both branches made concurrent modifications touching adjoining line ranges in [R
 
 ---
 
-## 5. Conflict 3: Documentation Migration & 4th Member Integration
+## Conflict 3: Documentation Migration & 4th Member Integration
 
 ### Conflicting Changes Encountered
 In merge commits `c113fc8` and `b981ab1`, two branches diverged:
@@ -88,7 +101,27 @@ Both branches made concurrent changes to the `Who Did What` table rows and surro
 
 ---
 
-## 6. Final Resolved State of README.md
+## Conflict 4: 5th Member Integration & Shared Fixture Tests (Merge `fb62bba`)
+
+### Conflicting Changes Encountered
+In commit `fb62bba`, the local branch merged incoming changes from Chan Myae Aung (commit `d139c26`):
+- Local commit `82b5e05` documented merge conflict resolutions in [README.md].
+- Remote commit `d139c26` (Chan Myae Aung) added [test_shared.py], added essential exclusions to [.gitignore], and inserted Chan Myae Aung's row into the `Who Did What` table in [README.md].
+
+When pulling and merging `d139c26`, Git detected conflicting concurrent edits at the bottom of the contributor table in [README.md].
+
+### Final Decision Made by the Team
+1. **Preserve All Member Contributions:** Retained Chan Myae Aung's row in the table (`| Chan Myae Aung (6705140010) | ChanMyaeAung | test_shared.py |`) alongside Kaung Khant Htoo's row.
+2. **Incorporate Shared Fixture Tests:** Integrated [test_shared.py] into the automated test suite to verify shared fixture reusability.
+3. **Preserve Environment Hygiene:** Accepted the [.gitignore] updates ignoring `.venv/` and pytest caches.
+4. **Preserve Conflict Analysis:** Maintained comprehensive conflict documentation.
+
+### Why Git Could Not Automatically Resolve It
+Both branches concurrently modified the final rows of the markdown table in [README.md]. Because Git has no semantic knowledge of markdown table syntax or team rosters, it required manual developer verification to properly merge the new member row without discarding previous entries or documentation.
+
+---
+
+## Final Resolved State of README.md
 
 After resolving all merge conflicts, the final state of [README.md] is:
 
@@ -98,6 +131,7 @@ After resolving all merge conflicts, the final state of [README.md] is:
 Group Assignment Submission by Unity Crew
 
 ## Group Name
+
 Unity Crew
 
 ## Who Did What
@@ -107,12 +141,21 @@ Unity Crew
 | Aeint Kyi Pyar Soe (6705140003) | AeintKyiPyarSoe | bank.py, test_deposit.py, .gitignore |
 | Htet Soe Lin (6705140023)       | Tyzonn22        | conftest.py                          |
 | Khun Maung Aye (6705140019)     | KhunMaungAye    | test_teardown.py                     |
+| Chan Myae Aung (6705140010)     | ChanMyaeAung    | test_shared.py                       |
 | Kaung Khant Htoo (6705140027)   | kxkhantx        | test_withdraw.py                     |
 ```
 
 ---
+## 4. Git Contribution Summary
+    17  Aeint Kyi Pyar Soe
+     5  Kaung Khant Htoo
+     5  Tyzon
+     4  Khun Maung Aye
+     2  karayuuco
+     1  ChannMyaeAung
+--- 
 
-## 7. Answers to Lab Questions
+## 5. Answers to Lab Questions
 
 ### 1. Why was your push rejected, and how did you fix it?
 > The push was rejected because the remote repository contained newer commits pushed by a collaborator that our local branch did not have. We fixed it by running `git pull origin main` to fetch and integrate the remote changes locally, resolving any merge conflicts, and then pushing again.
